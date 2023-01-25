@@ -6,18 +6,14 @@ import Home from "./pages/Home";
 import InputID from "./pages/InputID";
 import OutputID from "./pages/OutputID";
 function App() {
-  // tạo Local Storage để truyền data từ components cha đến con
   const [champList, setChampList] = useState(
     JSON.parse(localStorage.getItem("champList")) ?? []
-    // nếu trong mảng champList ko có gì thì mặc định là [] rỗng,
-    // => phải xét TH khi trong mảng ko có giá trị gì, sẽ bị in ra NULL (hoặc lỗi đỏ nếu truyền code cho người khác)
   );
   console.log(localStorage.getItem("champList"));
   useEffect(() => {
     localStorage.setItem("champList", JSON.stringify(champList));
   }, [champList]);
-  // window.localStorage.clear();
-  // xí để xóa
+
   return (
     <>
       <Router>

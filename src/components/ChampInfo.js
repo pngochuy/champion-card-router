@@ -1,5 +1,4 @@
 import React from "react";
-// import "../assests/style.css";
 function ChampInfo({ champName, champImg }) {
   const champ_img = "https://api.opendota.com" + champImg;
   return (
