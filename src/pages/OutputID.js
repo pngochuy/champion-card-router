@@ -5,7 +5,7 @@ function OutputID({ champList, setChampList }) {
   const { para } = useParams();
   let c = 1;
   console.log(champList.length);
-  // nếu lớn hơn 1 sẽ bị trùng info, nên c=1 là 1 info duy nhất
+
   return (
     <>
       {champList.map((info, index) => {
