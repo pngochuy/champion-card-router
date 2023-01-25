@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+
 function InputID({ champList, setChampList }) {
   const [newID, setNewID] = useState("");
   const navigate = useNavigate();
   const inputRefID = useRef();
+
   const handleAddNewChamp = () => {
     if (newID !== "") {
       console.log("Added");
@@ -33,6 +35,7 @@ function InputID({ champList, setChampList }) {
     setChampList(newChampInfo);
     navigate("/output/" + newID);
   };
+
   return (
     <>
       <div className="container">
@@ -55,12 +58,6 @@ function InputID({ champList, setChampList }) {
           </button>
         </div>
       </div>
-      <Link to="/input">
-        <button className="input-btn btn">Input</button>
-      </Link>
-      <Link to="/output/">
-        <button className="output-btn btn">Output</button>
-      </Link>
     </>
   );
 }
